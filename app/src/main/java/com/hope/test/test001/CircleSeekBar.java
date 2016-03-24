@@ -136,12 +136,14 @@ public class CircleSeekBar extends View implements View.OnTouchListener
 
         double angle = (Math.atan(mh/mw)/Math.PI*180);
 
-        this.angle = (int)angle;
+        System.out.println("angle: "+angle);
 
         if(mw >=0 )
             angle += 90;
         else
             angle += 270;
+
+        this.angle = (int)angle;
 
         this.drawSector(canvas,angle);
         this.drawCircleButton(canvas,angle);
